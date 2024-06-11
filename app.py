@@ -1,10 +1,10 @@
 import io
+from jugaad_data.nse import NSELive
 import logging
 from nsetools import Nse
 import pandas as pd
 import requests
 import yfinance as yf
-from jugaad_data.nse import NSELive
 
 nse = Nse()
 
@@ -52,10 +52,14 @@ def get_current_stock_value():
       stock_price = n.stock_quote(ticker)
       stock_data["symbol"] = stock_price['info']['symbol']
       stock_data["company"] = stock_price['info']['companyName']
-      print(stock_price)
+      stock_data["intraday"] = stock_price['priceInfo']["intraDayHighLow"]
+      stock_data["weekHighLow"] = stock_price['priceInfo']['weekHighLow']
+      #print(stock_price)
       print(stock_data)
       print(count)
       count += 1
+    else:
+      break
 
 
 get_current_stock_value()

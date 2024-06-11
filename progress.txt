@@ -1,0 +1,2 @@
+For now, I can collect data for each and every ticker.
+Need to push the data to any metric collector and to visualize the data.
