@@ -1,2 +1,3 @@
 For now, I can collect data for each and every ticker.
 Need to push the data to any metric collector and to visualize the data.
+redis:  redis-cli -u redis://default:RscHf9E2waXKeNws98yTQU8grVDUiGgR@redis-12484.c212.ap-south-1-1.ec2.redns.redis-cloud.com:12484
